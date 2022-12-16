@@ -1,0 +1,95 @@
+<ion-header>
+  <ion-toolbar class="ion-text-center">
+    <ion-title>Dxpx APP</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<h1 class="ion-text-center">Insira seu nome e Email</h1>  
+
+    <ion-item>
+    <ion-label>Seu nome</ion-label>
+    <ion-input placeholder="Guilherme"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Seu Email</ion-label>
+    <ion-input placeholder="guilherme.reis@aedb.br"></ion-input>
+  </ion-item>
+
+<br>
+
+<ion-radio-group>
+    
+  <ion-item>
+    <ion-label>Homem</ion-label>
+    <ion-radio slot="end" value="Homem"></ion-radio>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Mulher</ion-label>
+    <ion-radio slot="end" value="Mulher"></ion-radio>
+  </ion-item>
+
+</ion-radio-group>
+
+<ion-item>
+  <ion-label>Outro</ion-label>
+  <ion-textarea  placeholder="Digite aqui."></ion-textarea>
+</ion-item>
+
+<ion-button class="enviar">
+  <ion-label>Enviar</ion-label>
+</ion-button>
+
+
+
+
+
+
+
+
+
+<ion-fab slot="fixed" vertical="top" horizontal="start">
+
+  <ion-fab-button >
+    <ion-icon name="person-circle-outline"></ion-icon>
+  </ion-fab-button>
+
+  <ion-fab-list side="bottom">
+
+    <ion-fab-button routerLink="/notas" tab="Calendario">
+      <ion-icon name="document"></ion-icon>
+      
+    </ion-fab-button>
+
+    <ion-fab-button>
+      <ion-icon name="color-palette"></ion-icon>
+    </ion-fab-button>
+    
+    <ion-fab-button>
+      <ion-icon name="globe"></ion-icon>
+    </ion-fab-button>
+
+  </ion-fab-list>
+</ion-fab>
+
+
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+
+      <ion-tab-button routerLink="/notas" tab="Calendario">
+        <ion-icon name="fish-outline"></ion-icon>
+        <ion-label>Animais</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button  tab="Sair">
+        <ion-icon name="log-out-outline"></ion-icon>
+        <ion-label>Sair</ion-label>
+      </ion-tab-button>
+
+    </ion-tab-bar>
+  </ion-tabs>
+
+</ion-content>

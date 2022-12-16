@@ -1,0 +1,86 @@
+<ion-header>
+  
+  <ion-toolbar>
+
+    <ion-buttons >
+    <ion-back-button defaultHref="/" text="Voltar"></ion-back-button>
+  </ion-buttons>
+  
+    <ion-title class="ion-text-center">Animais</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <h1 class="ion-text-center">Quais animais voce mais gosta?</h1>
+
+  <ion-item *ngFor= "let entry of form">
+    <ion-label>{{entry.val}}</ion-label>
+    <ion-checkbox [(ngModel)]="entry.isChecked" (click)="_getSelectedItem(entry)"></ion-checkbox>
+  </ion-item>
+  
+  <h1 class="ion-text-center">Gasto medio por ano dos animais</h1>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>Animal</ion-col>
+      <ion-col>Valor</ion-col>
+    </ion-row>
+
+    <br>
+
+    <ion-row>
+      <ion-col>Cachorro</ion-col>
+      <ion-col>R$ 5000</ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>Gato</ion-col>
+      <ion-col>R$ 1650</ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>Hamster</ion-col>
+      <ion-col>R$ 400</ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>Cavalo</ion-col>
+      <ion-col>R$ 12000</ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>Coelho</ion-col>
+      <ion-col>R$ 1080</ion-col>
+    </ion-row>    
+
+
+    <ion-row>
+      <ion-col>Papagaio</ion-col>
+      <ion-col>R$ 2500</ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+  
+
+
+  <ion-progress-bar type="indeterminate"></ion-progress-bar>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      
+      <ion-tab-button routerLink="/inicio" tab="Inicio">
+        <ion-icon name="person-circle-outline"></ion-icon>
+        <ion-label>Inicio</ion-label>
+      </ion-tab-button>
+      
+
+      <ion-tab-button  tab="Sair">
+        <ion-icon name="log-out-outline"></ion-icon>
+        <ion-label>Sair</ion-label>
+      </ion-tab-button>
+
+    </ion-tab-bar>
+  </ion-tabs>
+
+</ion-content>
